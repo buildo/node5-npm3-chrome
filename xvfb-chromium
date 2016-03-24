@@ -16,6 +16,8 @@ Xvfb :99 -ac -screen 0 $XVFB_WHD -nolisten tcp &
 xvfb=$!
 
 export DISPLAY=:99
+export TMP=/tmp
+export TMPDIR=/tmp
 
 chromium --no-sandbox $@ &
 chromium=$!
